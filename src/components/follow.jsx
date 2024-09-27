@@ -12,23 +12,25 @@ class Follow extends Component {
     follow()
     {
         this.setState({
-            message: "Thanks For The Follow"
+            message: "Thanks For The Follow",
+            disabled: true
         })
     }
 
     unfollow()
     {
         this.setState({
-            message: "Follow Me!"
+            message: "Follow Me!",
+            disabled: false
         })
     }
 
     render() {
         return(
             <div>
-                <h1>{this.state.message}</h1>
-                <button onClick={() => this.follow()}>Follow</button>
-                <button onClick={() => this.unfollow()}>Unfollow</button>
+                <h2>{this.state.message}</h2>
+                <button onClick={() => this.follow()} disabled={this.state.disabled}>Follow</button>
+                <button onClick={() => this.unfollow()} disabled={!this.state.disabled}>Unfollow</button>
             </div>
         )
     }

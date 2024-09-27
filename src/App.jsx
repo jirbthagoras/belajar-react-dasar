@@ -8,9 +8,7 @@ import Follow from "./components/follow.jsx";
 function App() {
   return (
     <div className="App">
-      <Hello/>
-      <Greeting/>
-      <Guten name="Jabriel"/>
+      <Guten name="Jirbthagoras"/>
         <Follow/>
     </div>
   )
